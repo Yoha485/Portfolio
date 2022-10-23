@@ -1,0 +1,19 @@
+<button>
+  <slot />
+</button>
+
+<style>
+  button:after {
+    display: block;
+    content: '';
+    border-image: linear-gradient(90.02deg, #06fdd8 1.06%, #0e9aff 102.58%) 2;
+    
+    border-width: 0.1px;
+    border-style: solid;
+    transform: scaleX(0);
+    transition: transform 200ms ease-out;
+  }
+  button:hover:after {
+    transform: scaleX(1);
+  }
+</style>

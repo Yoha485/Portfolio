@@ -1,0 +1,41 @@
+---
+import Button from './Button.astro';
+
+const items = [
+  {
+    name: 'Main',
+    href: '/#main'
+  },
+  {
+    name: 'Projects',
+    href: '/#projects'
+  },
+  {
+    name: 'Contacts',
+    href: '#footer'
+  }
+];
+---
+
+<header>
+  <nav>
+    {
+      items.map((item) => (
+        <Button>
+          <a href={item.href}>{item.name}</a>
+        </Button>
+      ))
+    }
+  </nav>
+
+  <style>
+    nav {
+      height: 80px;
+
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      column-gap: 60px;
+    }
+  </style>
+</header>
