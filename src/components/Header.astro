@@ -4,7 +4,7 @@ import Button from './Button.astro';
 const items = [
   {
     name: 'Main',
-    href: '/#main'
+    href: '/#intro'
   },
   {
     name: 'Projects',
@@ -17,7 +17,7 @@ const items = [
 ];
 ---
 
-<header>
+<header id="header">
   <nav>
     {
       items.map((item) => (
@@ -27,15 +27,19 @@ const items = [
       ))
     }
   </nav>
-
-  <style>
-    nav {
-      height: 80px;
-
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      column-gap: 60px;
-    }
-  </style>
 </header>
+
+<style>
+  nav {
+    height: 160px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 60px;
+
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+  }
+</style>

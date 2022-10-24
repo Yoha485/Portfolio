@@ -1,0 +1,59 @@
+---
+import MainPageSociall from './MainPageSociall.astro';
+import Marginer from './Marginer.astro';
+import CV from './CV.astro';
+
+import { mainPageTitle, mainPageDescription } from '../constants/MainPage';
+---
+
+<section id="intro">
+  <Marginer margin="20px" />
+  <h1>{mainPageTitle}</h1>
+  <Marginer margin="40px" />
+  <div class="description-and-cv">
+    <div>
+      <h2>{mainPageDescription}</h2>
+      <Marginer margin="70px" />
+      <MainPageSociall />
+    </div>
+
+    <div class="cv">
+      <CV />
+    </div>
+  </div>
+</section>
+
+<style>
+  h1 {
+    text-fill-color: transparent;
+    background: linear-gradient(90.02deg, #06fdd8 1.06%, #0e9aff 102.58%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-weight: bold;
+    font-size: 120px;
+    line-height: 110%;
+  }
+
+  h2 {
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 100%;
+  }
+
+  h1,
+  h2 {
+    white-space: pre-line;
+  }
+
+  .description-and-cv {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cv {
+    margin-top: 10px;
+    margin-right: 200px;
+  }
+</style>

@@ -35,7 +35,9 @@ const { title = 'Portfolio' } = Astro.props as Props;
     <MaxWidth>
       <HorizontalPadding>
         <Header />
-        <slot />
+        <main>
+          <slot />
+        </main>
         <Footer />
       </HorizontalPadding>
     </MaxWidth>

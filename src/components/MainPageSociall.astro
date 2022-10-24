@@ -1,0 +1,40 @@
+---
+import Button from './Button.astro';
+
+const items = [
+  {
+    name: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/anton-morozov-0aba38226/'
+  },
+  {
+    name: 'GitHub',
+    href: 'https://github.com/Yoha485'
+  },
+  {
+    name: 'Telegram',
+    href: 'https://t.me/wme_music'
+  }
+];
+---
+
+<address>
+  {
+    items.map((item) => (
+      <Button>
+        <a href={item.href}>{item.name}</a>
+      </Button>
+    ))
+  }
+</address>
+
+<style>
+  address {
+    display: flex;
+    column-gap: 54px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+  }
+</style>
