@@ -1,0 +1,62 @@
+---
+import Button from './Button.astro';
+import Marginer from './Marginer.astro';
+
+import type { Project } from '../constants/MainPage';
+
+type Props = Project;
+
+const { href, img, description, website, code } = Astro.props;
+---
+
+<div class="project">
+  <a href={href}>
+    <div class="preview">
+      <img src={img} alt="No Image Found" />
+    </div>
+  </a>
+  <Marginer margin="28px" />
+
+  <p class="description">{description}</p>
+  <Marginer margin="18px" />
+
+  <div class="project-links">
+    <Button><a href=""><p>Website</p></a></Button>
+    <Button><a href=""><p>Code</p></a></Button>
+  </div>
+</div>
+
+<style>
+  .preview {
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+    border: 1px solid #404040;
+
+    -webkit-transition: border 500ms ease-out;
+    -moz-transition: border 500ms ease-out;
+    -o-transition: border 500ms ease-out;
+    transition: border 500ms ease-out;
+
+    padding: 60px;
+  }
+
+  .preview:hover {
+    border: 1px solid var(--white);
+  }
+
+  .description {
+    text-align: center;
+    padding: 0 12%;
+    text-transform: uppercase;
+  }
+
+  .project-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+</style>
