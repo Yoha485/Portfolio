@@ -12,35 +12,35 @@ export const mainPageDescription = `Are you looking for a fresh web developer? H
 export const projects: Array<Project> = [
   {
     href: '#footer',
-    img: '',
+    img: '/circle.png',
     description: 'Dolore duis qui aliquip consectetur ipsum ullamco ad ea veniam.',
     website: '',
     code: ''
   },
   {
     href: '#footer',
-    img: '',
+    img: '/circle.png',
     description: 'Dolor quis elit aliqua excepteur cillum eu excepteur fugiat officia amet sunt.',
     website: '',
     code: ''
   },
   {
     href: '#footer',
-    img: '',
+    img: '/circle.png',
     description: 'Adipisicing id dolore veniam pariatur in amet ullamco dolore ut aliqua officia aliqua.',
     website: '',
     code: ''
   },
   {
     href: '#footer',
-    img: '',
+    img: '/circle.png',
     description: 'Non anim amet id cillum quis.',
     website: '',
     code: ''
   },
   {
     href: '#footer',
-    img: '',
+    img: '/circle.png',
     description: 'Incididunt laborum consectetur ex velit commodo labore ex tempor.',
     website: '',
     code: ''
