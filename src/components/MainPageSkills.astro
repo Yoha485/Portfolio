@@ -1,0 +1,26 @@
+---
+import { skills } from '../constants/MainPage';
+import MainPageSkill from './MainPageSkill.astro';
+---
+
+<section id="skills">
+  {
+    skills.map((skill) => (
+      <MainPageSkill
+        skill={skill.skill}
+        subskills={skill.subskills}
+        elementSkillId={skill.elementSkillId}
+        elementSubskillId={skill.elementSubskillId}
+        color={skill.color}
+      />
+    ))
+  }
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+  }
+</style>

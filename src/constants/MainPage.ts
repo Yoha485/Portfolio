@@ -6,8 +6,40 @@ export interface Project {
   code: string;
 }
 
+export interface Skill {
+  skill: string;
+  subskills: Array<string>;
+  elementSkillId: string;
+  elementSubskillId: string;
+  color: string;
+}
+
 export const mainPageTitle = 'Software, app\nand web developer';
 export const mainPageDescription = `Are you looking for a fresh web developer? Highly motivated\n and fast learner? I'm here for you! You can download my CV/\nResume by clicking on the button below.`;
+
+export const skills: Array<Skill> = [
+  {
+    skill: 'FrontEnd',
+    subskills: ['TypeScript', 'HTML/CSS', 'React', 'NextJS', 'Astro'],
+    elementSkillId: 'frontend-circle',
+    elementSubskillId: 'subfrontend-circle',
+    color: '#06fcd8'
+  },
+  {
+    skill: 'BackEnd',
+    subskills: ['NestJS', 'Spring Boot', 'React', 'NextJS', 'Astro'],
+    elementSkillId: 'backend-circle',
+    elementSubskillId: 'subbackend-circle',
+    color: '#0AD0EA'
+  },
+  {
+    skill: 'DevOps',
+    subskills: ['Docker', 'CI/CD', 'Kuberneties', 'Azure', 'AWS'],
+    elementSkillId: 'devops-circle',
+    elementSubskillId: 'subdevops-circle',
+    color: '#0DA1FC'
+  }
+];
 
 export const projects: Array<Project> = [
   {
