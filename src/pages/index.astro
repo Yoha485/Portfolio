@@ -2,9 +2,10 @@
 import MainPageTitle from '../components/MainPageIntro.astro';
 import Marginer from '../components/Marginer.astro';
 import MainPageProjects from '../components/MainPageProjects.astro';
+import MainPageSkills from '../components/MainPageSkills.astro';
+import MainPageSendMessage from '../components/MainPageSendMessage.astro';
 
 import Layout from '../layouts/Layout.astro';
-import MainPageSkills from '../components/MainPageSkills.astro';
 ---
 
 <Layout>
@@ -14,5 +15,7 @@ import MainPageSkills from '../components/MainPageSkills.astro';
   <MainPageSkills />
   <Marginer margin="260px" />
   <MainPageProjects />
+  <Marginer margin="160px" />
+  <MainPageSendMessage />
   <Marginer margin="160px" />
 </Layout>

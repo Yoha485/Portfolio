@@ -1,0 +1,69 @@
+---
+import MainPageSendMessageArrow from './MainPageSendMessageArrow.astro';
+import Marginer from './Marginer.astro';
+---
+
+<section>
+  <img src="/photo.png" alt="No Photo" class="center" />
+  <p>Anton Morozov</p>
+  <Marginer margin={'60px'} />
+  <p>YOU CAN SEND ME A MESSAGE <i>ANONYMOUSLY</i></p>
+  <Marginer margin={'100px'} />
+
+  <div class="message-window">
+    <textarea placeholder="Text"></textarea>
+    <MainPageSendMessageArrow />
+  </div>
+</section>
+
+<style>
+  img,
+  p,
+  textarea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  img {
+    width: 25%;
+  }
+
+  p {
+    text-align: center;
+    font-size: 28px;
+    line-height: 100%;
+  }
+
+  .message-window {
+    position: relative;
+  }
+
+  textarea,
+  textarea::placeholder {
+    color: #404040;
+    font-size: 32px !important;
+    line-height: 100%;
+  }
+
+  textarea::placeholder {
+    padding: 7px;
+  }
+
+  textarea {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #404040;
+    background-color: inherit;
+    padding-right: 50px;
+
+    resize: vertical;
+
+    min-width: 70%;
+    min-height: 300px;
+  }
+
+  textarea::-webkit-scrollbar {
+    display: none;
+  }
+</style>

@@ -15,6 +15,53 @@ import MainPageSkill from './MainPageSkill.astro';
       />
     ))
   }
+
+  <script is:inline src="/js/scroll.js"></script>
+  <script>
+    import { skills } from '../constants/MainPage';
+
+    const getScrollTimelineWithiShift = (shift: number) => {
+      //@ts-ignorex
+      return new ScrollTimeline({
+        source: document.scrollingElement,
+        orientation: 'block',
+        scrollOffsets: [
+          //@ts-ignore
+          CSS.px(shift + 200),
+          //@ts-ignore
+          CSS.px(document.getElementById('skills').getBoundingClientRect().y + window.scrollY + shift - 110)
+        ]
+      });
+    };
+
+    skills.forEach((item, index) => {
+      const subskillCircleElement = document.getElementById(item.elementSubskillId);
+
+      subskillCircleElement?.offsetWidth &&
+        subskillCircleElement.animate(
+          { transform: ['translateX(0)', `translateX(-${subskillCircleElement.offsetWidth / 2 + 60}px)`] },
+          {
+            duration: 1,
+            fill: 'both',
+            //@ts-ignore
+            timeline: getScrollTimelineWithiShift(subskillCircleElement.offsetHeight * index)
+          }
+        );
+
+      const skillCircleElement = document.getElementById(item.elementSkillId);
+
+      skillCircleElement?.offsetWidth &&
+        skillCircleElement.animate(
+          { transform: ['translateX(0)', `translateX(${skillCircleElement.offsetWidth / 2 + 60}px)`] },
+          {
+            duration: 1,
+            fill: 'both',
+            //@ts-ignore
+            timeline: getScrollTimelineWithiShift(skillCircleElement.offsetHeight * index)
+          }
+        );
+    });
+  </script>
 </section>
 
 <style>

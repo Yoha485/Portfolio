@@ -27,7 +27,7 @@ export const skills: Array<Skill> = [
   },
   {
     skill: 'BackEnd',
-    subskills: ['NestJS', 'Spring Boot', 'React', 'NextJS', 'Astro'],
+    subskills: ['Postgres', 'MongoDB', 'NestJS', 'Spring Boot', 'Flask'],
     elementSkillId: 'backend-circle',
     elementSubskillId: 'subbackend-circle',
     color: '#0AD0EA'

@@ -6,6 +6,7 @@ import HorizontalPadding from '../components/HorizontalPadding.astro';
 
 import '../styles/reset.css';
 import '../styles/global.css';
+import MobileWebsiteRedirect from '../components/MobileWebsiteRedirect.astro';
 
 export interface Props {
   title?: string;
@@ -30,6 +31,8 @@ const { title = 'Portfolio' } = Astro.props as Props;
     />
 
     <title>{title}</title>
+
+    <MobileWebsiteRedirect />
   </head>
   <body>
     <MaxWidth>
@@ -41,91 +44,5 @@ const { title = 'Portfolio' } = Astro.props as Props;
         <Footer />
       </HorizontalPadding>
     </MaxWidth>
-
-    <script type="module">
-      // import 'https://rawcdn.githack.com/flackr/scroll-timeline/3063e156535f3ab1ffc8a4000ffdd3290232c121/dist/scroll-timeline.js';
-      import '/public/js/scroll.js'
-
-      const subskillCircleElement = document.getElementById('subfrontend-circle');
-      const skills = document.getElementById('skills');
-
-      const scrollTimeline = new ScrollTimeline({
-        source: document.scrollingElement,
-        orientation: 'block',
-        scrollOffsets: [CSS.px(0), CSS.px(skills.getBoundingClientRect().y + window.scrollY)]
-      });
-
-      const scrollTimeline2 = new ScrollTimeline({
-        source: document.scrollingElement,
-        orientation: 'block',
-        scrollOffsets: [
-          CSS.px(subskillCircleElement.offsetHeight),
-          CSS.px(skills.getBoundingClientRect().y + window.scrollY + subskillCircleElement.offsetHeight)
-        ]
-      });
-
-      const scrollTimeline3 = new ScrollTimeline({
-        source: document.scrollingElement,
-        orientation: 'block',
-        scrollOffsets: [
-          CSS.px(subskillCircleElement.offsetHeight * 2),
-          CSS.px(skills.getBoundingClientRect().y + window.scrollY + subskillCircleElement.offsetHeight * 2)
-        ]
-      });
-
-      document.getElementById('subfrontend-circle').animate(
-        { transform: ['translateX(0)', `translateX(-${subskillCircleElement.offsetWidth / 2 + 60}px)`] },
-        {
-          duration: 1,
-          fill: 'both',
-          timeline: scrollTimeline
-        }
-      );
-
-      document.getElementById('frontend-circle').animate(
-        { transform: ['translateX(0)', `translateX(${subskillCircleElement.offsetWidth / 2 + 60}px)`] },
-        {
-          duration: 1,
-          fill: 'both',
-          timeline: scrollTimeline
-        }
-      );
-
-      document.getElementById('subbackend-circle').animate(
-        { transform: ['translateX(0)', `translateX(-${subskillCircleElement.offsetWidth / 2 + 60}px)`] },
-        {
-          duration: 1,
-          fill: 'both',
-          timeline: scrollTimeline2
-        }
-      );
-
-      document.getElementById('backend-circle').animate(
-        { transform: ['translateX(0)', `translateX(${subskillCircleElement.offsetWidth / 2 + 60}px)`] },
-        {
-          duration: 1,
-          fill: 'both',
-          timeline: scrollTimeline2
-        }
-      );
-
-      document.getElementById('subdevops-circle').animate(
-        { transform: ['translateX(0)', `translateX(-${subskillCircleElement.offsetWidth / 2 + 60}px)`] },
-        {
-          duration: 1,
-          fill: 'both',
-          timeline: scrollTimeline3
-        }
-      );
-
-      document.getElementById('devops-circle').animate(
-        { transform: ['translateX(0)', `translateX(${subskillCircleElement.offsetWidth / 2 + 60}px)`] },
-        {
-          duration: 1,
-          fill: 'both',
-          timeline: scrollTimeline3
-        }
-      );
-    </script>
   </body>
 </html>
