@@ -55,17 +55,27 @@ const { skill, subskills, elementSkillId, elementSubskillId, color } = Astro.pro
 
   h2 {
     font-weight: 700;
-    font-size: 42px;
+    font-size: 28px;
     color: #111111;
   }
 
   p {
     font-weight: 400;
-    font-size: 28px;
+    font-size: 18px;
   }
 
   h2,
   p {
     line-height: 100%;
+  }
+
+  @media (min-width: 1400px) {
+    h2 {
+      font-size: 42px;
+    }
+
+    p {
+      font-size: 28px;
+    }
   }
 </style>

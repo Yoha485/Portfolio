@@ -9,7 +9,6 @@ import { mainPageTitle, mainPageDescription } from '../constants/MainPage';
 <section id="intro">
   <Marginer margin="20px" />
   <h1>{mainPageTitle}</h1>
-  <Marginer margin="25px" />
   <div class="description-and-cv">
     <div>
       <h2>{mainPageDescription}</h2>
@@ -32,14 +31,16 @@ import { mainPageTitle, mainPageDescription } from '../constants/MainPage';
     -webkit-text-fill-color: transparent;
 
     font-weight: bold;
-    font-size: 120px;
+    font-size: 74px;
     line-height: 100%;
   }
 
   h2 {
-    font-size: 28px;
+    font-size: 18px;
     font-weight: normal;
     line-height: 120%;
+
+    margin-top: 15px;
   }
 
   h1,
@@ -55,5 +56,18 @@ import { mainPageTitle, mainPageDescription } from '../constants/MainPage';
   .cv {
     margin-top: 10px;
     margin-right: 200px;
+  }
+
+  @media (min-width: 1600px) {
+    h1 {
+      font-weight: bold;
+      font-size: 120px;
+      line-height: 100%;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-top: 25px;
+    }
   }
 </style>
