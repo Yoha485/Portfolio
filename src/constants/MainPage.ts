@@ -34,7 +34,7 @@ export const skills: Array<Skill> = [
   },
   {
     skill: 'DevOps',
-    subskills: ['Docker', 'CI/CD', 'Kuberneties', 'Azure', 'AWS'],
+    subskills: ['Docker', 'CI/CD', 'Azure', 'AWS', 'Vercel'],
     elementSkillId: 'devops-circle',
     elementSubskillId: 'subdevops-circle',
     color: '#0DA1FC'
