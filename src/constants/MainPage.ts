@@ -43,38 +43,10 @@ export const skills: Array<Skill> = [
 
 export const projects: Array<Project> = [
   {
-    href: '#footer',
-    img: '/circle.png',
+    href: '/projects/desigher_portfolio',
+    img: '/MainPage/projects/designer_portfolio.jpg',
     description: 'Dolore duis qui aliquip consectetur ipsum ullamco ad ea veniam.',
-    website: '',
-    code: ''
-  },
-  {
-    href: '#footer',
-    img: '/circle.png',
-    description: 'Dolor quis elit aliqua excepteur cillum eu excepteur fugiat officia amet sunt.',
-    website: '',
-    code: ''
-  },
-  {
-    href: '#footer',
-    img: '/circle.png',
-    description: 'Adipisicing id dolore veniam pariatur in amet ullamco dolore ut aliqua officia aliqua.',
-    website: '',
-    code: ''
-  },
-  {
-    href: '#footer',
-    img: '/circle.png',
-    description: 'Non anim amet id cillum quis.',
-    website: '',
-    code: ''
-  },
-  {
-    href: '#footer',
-    img: '/circle.png',
-    description: 'Incididunt laborum consectetur ex velit commodo labore ex tempor.',
-    website: '',
-    code: ''
+    website: 'https://alina-barannykova.netlify.app/',
+    code: 'https://github.com/Yoha485/Designer-Portfolio'
   }
 ];
