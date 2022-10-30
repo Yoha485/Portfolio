@@ -1,19 +1,112 @@
 ---
+import type { MDXLayoutProps } from 'astro';
+
 import PostCategoriesBar from '../components/PostCategoriesBar.astro';
+import Marginer from '../components/Marginer.astro';
 
 import Layout from './Layout.astro';
+
+type Props = MDXLayoutProps<{
+  date: string;
+  tags: Array<string>;
+  color: string;
+}>;
+
+const { frontmatter } = Astro.props;
+const color = frontmatter.color;
 ---
 
 <Layout>
-  <div>
+  <Marginer margin="50px" />
+  <div class="grid">
     <PostCategoriesBar />
-    <slot />
+    <div class="post">
+      <slot />
+      <p class="date">Last Updated: {frontmatter.date}</p>
+
+      <div class="tags">
+        {frontmatter.tags.map((tag) => <div>{tag}</div>)}
+      </div>
+    </div>
   </div>
+  <Marginer margin="150px" />
 </Layout>
 
-<style>
-  div {
+<style define:vars={{ color }}>
+  .grid {
     display: grid;
     grid-template-columns: minmax(200px, 1fr) 4fr;
   }
+
+  .post {
+    margin-right: 30%;
+  }
+
+  .post :global(h1) {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 100%;
+
+    margin-bottom: 30px;
+  }
+
+  .post :global(h2) {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 100%;
+
+    margin: 30px 0;
+  }
+
+  .post :global(p) {
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 140%;
+
+    margin-bottom: 20px;
+  }
+
+  .post :global(p):last-child {
+    margin-bottom: 10px;
+  }
+
+  .post :global(button) {
+    color: var(--color);
+  }
+
+  .date {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--gray);
+  }
+
+  .tags {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--color);
+  }
+
+  .post :global(.code-snippet) {
+    margin-bottom: 20px;
+  }
+
+  .post :global(code) {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+  }
+
+  .post :global(strong) {
+    color: var(--color);
+  }
+
+  @media (min-width: 1600px) {
+    .post :global(.code-snippet) {
+      width: 90%;
+    }
+  }
 </style>
+
+<!--                                                                                      -->
