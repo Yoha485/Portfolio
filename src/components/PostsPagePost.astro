@@ -1,0 +1,44 @@
+---
+import type { Post } from '../constants/PostsPage';
+import Marginer from './Marginer.astro';
+
+type Props = Post;
+
+const { href, category, title, description, tags } = Astro.props;
+const color = category.color;
+---
+
+<article class="post">
+  <a href={href}><h2>{title}</h2></a>
+  <Marginer margin="18px" />
+
+  <p class="description">{description}</p>
+  <Marginer margin="21px" />
+
+  <div>
+    {tags.map((tag) => <p class="tag">{tag}</p>)}
+  </div>
+</article>
+
+<style define:vars={{ color }}>
+  .post {
+    border: 1px solid var(--gray);
+    padding: 37px 33px;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 100%;
+  }
+
+  .description {
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 140%;
+  }
+
+  .tag {
+    color: var(--color);
+  }
+</style>

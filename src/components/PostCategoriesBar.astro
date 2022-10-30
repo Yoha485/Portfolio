@@ -1,0 +1,58 @@
+---
+import { postCategories } from '../constants/PostsPage';
+import Marginer from './Marginer.astro';
+---
+
+<nav>
+  <h1>CATEGORIES</h1>
+  <Marginer margin="20px" />
+  {
+    postCategories.map((category) => (
+      <div>
+        <h2 style={{ color: category.category.color }}>{category.category.value}</h2>
+        <Marginer margin="10px" />
+
+        <div class="subcategories">
+          {category.subcategories.map((subcategory) => (
+            <h3>
+              <span style={{ color: category.category.color }}>•</span>
+              {subcategory}
+            </h3>
+          ))}
+        </div>
+        <Marginer margin="20px" />
+      </div>
+    ))
+  }
+</nav>
+
+<style>
+  h1 {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+  }
+
+  h2 {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+  }
+
+  h2,
+  h3 {
+    cursor: pointer;
+  }
+
+  .subcategories {
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+  }
+</style>
