@@ -1,20 +1,10 @@
 ---
 import Marginer from '../components/Marginer.astro';
 import PostsPagePosts from '../components/PostsPagePosts.astro';
-import Layout from '../layouts/Layout.astro';
+import PostLayout from '../layouts/PostLayout.astro';
 ---
 
-<Layout>
-  <div>
-    <nav></nav>
-    <PostsPagePosts />
-  </div>
+<PostLayout>
+  <PostsPagePosts />
   <Marginer margin="180px" />
-</Layout>
-
-<style>
-  div {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-  }
-</style>
+</PostLayout>
