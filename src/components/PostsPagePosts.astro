@@ -7,7 +7,7 @@ import { frontendCategory, backendCategory, devopsCategory, posts } from '../con
 
 <section>
   {
-    [frontendCategory, backendCategory, devopsCategory].map((category) => (
+    [frontendCategory].map((category) => (
       <div>
         <h1 style={{ color: category.color }}>{category.value}</h1>
         <Marginer margin="20px" />

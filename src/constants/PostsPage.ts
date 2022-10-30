@@ -35,45 +35,5 @@ export const posts: Array<Post> = [
       'Voluptate minim velit laboris ipsum ullamco velit nisi. Proident sunt do officia veniam qui enim dolor.',
     category: frontendCategory,
     tags: ['TypeScript']
-  },
-  {
-    href: 'posts/typscript',
-    title: 'TypeScript Features',
-    description:
-      'Voluptate minim velit laboris ipsum ullamco velit nisi. Proident sunt do officia veniam qui enim dolor.',
-    category: frontendCategory,
-    tags: ['TypeScript']
-  },
-  {
-    href: 'posts/typscript',
-    title: 'TypeScript Features',
-    description:
-      'Voluptate minim velit laboris ipsum ullamco velit nisi. Proident sunt do officia veniam qui enim dolor.',
-    category: backendCategory,
-    tags: ['TypeScript']
-  },
-  {
-    href: 'posts/typscript',
-    title: 'TypeScript Features',
-    description:
-      'Voluptate minim velit laboris ipsum ullamco velit nisi. Proident sunt do officia veniam qui enim dolor.',
-    category: backendCategory,
-    tags: ['TypeScript']
-  },
-  {
-    href: 'posts/typscript',
-    title: 'TypeScript Features',
-    description:
-      'Voluptate minim velit laboris ipsum ullamco velit nisi. Proident sunt do officia veniam qui enim dolor.',
-    category: devopsCategory,
-    tags: ['TypeScript']
-  },
-  {
-    href: 'posts/typscript',
-    title: 'TypeScript Features',
-    description:
-      'Voluptate minim velit laboris ipsum ullamco velit nisi. Proident sunt do officia veniam qui enim dolor.',
-    category: devopsCategory,
-    tags: ['TypeScript']
   }
 ];
