@@ -29,7 +29,7 @@ export const postCategories = [
 
 export const posts: Array<Post> = [
   {
-    href: 'posts/typscript',
+    href: 'posts/typescript-uncommon-features',
     title: 'TypeScript Features',
     description:
       'Voluptate minim velit laboris ipsum ullamco velit nisi. Proident sunt do officia veniam qui enim dolor.',

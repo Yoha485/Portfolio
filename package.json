@@ -13,7 +13,10 @@
     "format": "prettier --write ./**/*.{js,jsx,ts,tsx,css,md,json,astro} --config ./.prettierrc"
   },
   "dependencies": {
-    "astro": "^1.5.2"
+    "@astrojs/image": "^0.11.0",
+    "@astrojs/mdx": "^0.11.5",
+    "astro": "^1.5.2",
+    "sharp": "^0.31.1"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^5.40.1",
