@@ -8,10 +8,7 @@ color: var(--frontend)
 import Button from '../../components/Button.astro';
 import Marginer from '../../components/Marginer.astro';
 import CodeWrapper from '../../components/CodeWrapper.astro';
-import CodeSnippet from '../../components/CodeSnippet.astro';
-
-import int_range from '/Posts/uncommon-typescript-features/int_range.svg';
-import partial from '/Posts/uncommon-typescript-features/partial.svg';
+import CodeWindow from '../../components/CodeWindow.astro';
 
 # Uncommon TypeScript Features
 
@@ -23,7 +20,16 @@ TypeScript allows you to create a union of types like so <CodeWrapper>type Coffe
 
 However this gets worse if you need to specify a big range of numbers. In this case if you don't want to check your range conditionaly, you may find it usefull to create an **IntRange** type:
 
-<CodeSnippet src={int_range} />
+<CodeWindow code={`type Enumerate<N extends number, Acc extends number[] = []> = Acc['length'] extends N
+  ? Acc[number]
+  : Enumerate<N, [...Acc, Acc['length']]>\n
+type IntRange<F extends number, T extends number> 
+    = Exclude<Enumerate<T>, Enumerate<F>>
+
+const num: IntRange<20, 300> = 200 // It's Ok
+const num: IntRange<20, 300> = 1000 // This will give you an error
+`} lang="ts" theme="material-lighter" />
+
 <Marginer margin="50px" />
 
 ## Partial, Required, and Pick
@@ -31,6 +37,3 @@ However this gets worse if you need to specify a big range of numbers. In this c
 Those three types are actually from <Button><a href='https://www.typescriptlang.org/docs/handbook/utility-types.html'>TypeScript Utility Types</a></Button>. But among many others I find them particularly usefull.
 
 The **Partial** is a type wrapper that makes all fields optional. This way you can make something like:
-
-<CodeSnippet src={partial} />
-
