@@ -16,7 +16,7 @@ const color = category.color;
     <p class="description">{description}</p>
     <Marginer margin="21px" />
 
-    <div>
+    <div class='tags'>
       {tags.map((tag) => <p class="tag">{tag}</p>)}
     </div>
   </a>
@@ -38,6 +38,11 @@ const color = category.color;
     font-weight: 400;
     font-size: 19px;
     line-height: 140%;
+  }
+
+  .tags {
+    display: flex;
+    column-gap: 20px;
   }
 
   .tag {
