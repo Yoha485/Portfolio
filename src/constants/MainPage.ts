@@ -15,7 +15,7 @@ export interface Skill {
 }
 
 export const mainPageTitle = 'Software, app\nand web developer';
-export const mainPageDescription = `Motivated developer with a strong coding background.\nI love learning new stuff and create things \nfor people all around`;
+export const mainPageDescription = `Motivated developer with a strong coding background.\nLove learning new stuff and create things \nfor people all around`;
 
 export const skills: Array<Skill> = [
   {

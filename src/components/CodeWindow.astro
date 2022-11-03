@@ -1,7 +1,7 @@
 ---
 import { Code } from 'astro/components';
 
-type Props = { code: string; lang?: 'ts' | 'js'; theme?: string };
+type Props = { code: string; lang: 'ts' | 'js'; theme?: string };
 
 const { code, lang, theme } = Astro.props;
 ---
@@ -14,7 +14,7 @@ const { code, lang, theme } = Astro.props;
   </div>
 
   <div class="code">
-    <Code code={code} lang={lang} theme={theme} />
+    <Code code={code} lang={lang} theme={theme || 'material-lighter'} />
   </div>
 </div>
 
@@ -58,6 +58,8 @@ const { code, lang, theme } = Astro.props;
     background-color: var(--white) !important;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
+
+    font-size: 19px !important;
   }
 
   .code :global(::-webkit-scrollbar-thumb) {
