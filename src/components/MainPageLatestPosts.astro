@@ -1,0 +1,32 @@
+---
+import { posts } from '../constants/PostsPage';
+import MainPageSectionTitle from './MainPageSectionTitle.astro';
+import PostsPagePost from './PostsPagePost.astro';
+---
+
+<section>
+  <MainPageSectionTitle>Latest Posts</MainPageSectionTitle>
+
+  {
+    posts
+      .slice(0, 4)
+      .map((post) => (
+        <PostsPagePost
+          href={post.href}
+          category={post.category}
+          description={post.description}
+          title={post.title}
+          tags={post.tags}
+        />
+      ))
+  }
+</section>
+
+<style>
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 25px;
+    row-gap: 30px;
+  }
+</style>

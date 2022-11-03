@@ -2,24 +2,29 @@
 import MainPageProject from './MainPageProject.astro';
 
 import { projects } from '../constants/MainPage';
+import MainPageSectionTitle from './MainPageSectionTitle.astro';
 ---
 
 <section id="projects">
-  {
-    projects.map((project) => (
-      <MainPageProject
-        href={project.href}
-        img={project.img}
-        description={project.description}
-        website={project.website}
-        code={project.code}
-      />
-    ))
-  }
+  <MainPageSectionTitle>Projects</MainPageSectionTitle>
+
+  <div>
+    {
+      projects.map((project) => (
+        <MainPageProject
+          href={project.href}
+          img={project.img}
+          description={project.description}
+          website={project.website}
+          code={project.code}
+        />
+      ))
+    }
+  </div>
 </section>
 
 <style>
-  section {
+  div {
     display: grid;
     column-gap: 25px;
     row-gap: 80px;
