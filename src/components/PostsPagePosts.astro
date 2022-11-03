@@ -7,22 +7,28 @@ import { frontendCategory, backendCategory, devopsCategory, posts } from '../con
 
 <section>
   {
-    [frontendCategory].map((category) => (
+    [frontendCategory, backendCategory, devopsCategory].map((category) => (
       <div>
-        <h1 style={{ color: category.color }}>{category.value}</h1>
+        <h1 id={category.value} style={{ color: category.color }}>
+          {category.value}
+        </h1>
         <Marginer margin="20px" />
         <div class="posts-grid">
-          {posts
-            .filter((post) => post.category === category)
-            .map((post) => (
-              <PostsPagePost
-                href={post.href}
-                title={post.title}
-                description={post.description}
-                tags={post.tags}
-                category={post.category}
-              />
-            ))}
+          {posts.filter((post) => post.category === category).length ? (
+            posts
+              .filter((post) => post.category === category)
+              .map((post) => (
+                <PostsPagePost
+                  href={post.href}
+                  title={post.title}
+                  description={post.description}
+                  tags={post.tags}
+                  category={post.category}
+                />
+              ))
+          ) : (
+            <div class="no-posts">No Posts Yet</div>
+          )}
         </div>
       </div>
     ))
@@ -47,5 +53,14 @@ import { frontendCategory, backendCategory, devopsCategory, posts } from '../con
     font-weight: 500;
     font-size: 22px;
     line-height: 27px;
+  }
+
+  .no-posts {
+    color: var(--gray);
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 140%;
+
+    margin-left: 33px;
   }
 </style>

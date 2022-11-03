@@ -9,10 +9,20 @@ import Marginer from './Marginer.astro';
   {
     postCategories.map((category) => (
       <div>
-        <h2 style={{ color: category.category.color }}>{category.category.value}</h2>
-        <Marginer margin="10px" />
+        <a href={category.href}>
+          <h2 style={{ color: category.category.color }}>{category.category.value}</h2>
+        </a>
 
-        <div class="subcategories">
+        <Marginer margin="20px" />
+      </div>
+    ))
+  }
+</nav>
+
+<!-- 
+  <Marginer margin="10px" />
+
+  <div class="subcategories">
           {category.subcategories.map((subcategory) => (
             <h3>
               <span style={{ color: category.category.color }}>•</span>
@@ -20,11 +30,7 @@ import Marginer from './Marginer.astro';
             </h3>
           ))}
         </div>
-        <Marginer margin="20px" />
-      </div>
-    ))
-  }
-</nav>
+ -->
 
 <style>
   h1 {
@@ -43,11 +49,6 @@ import Marginer from './Marginer.astro';
     font-weight: 500;
     font-size: 18px;
     line-height: 27px;
-  }
-
-  h2,
-  h3 {
-    cursor: pointer;
   }
 
   .subcategories {

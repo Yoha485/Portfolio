@@ -14,14 +14,17 @@ export const devopsCategory = { value: 'DevOps', color: '#0DA1FC' };
 
 export const postCategories = [
   {
+    href: '/posts#FrontEnd',
     category: frontendCategory,
     subcategories: ['React', 'CSS', 'TypeScript']
   },
   {
+    href: '/posts#BackEnd',
     category: backendCategory,
     subcategories: ['Node']
   },
   {
+    href: '/posts#DevOps',
     category: devopsCategory,
     subcategories: ['Docker']
   }
