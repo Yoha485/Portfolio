@@ -33,9 +33,8 @@ export const postCategories = [
 export const posts: Array<Post> = [
   {
     href: 'posts/typescript-uncommon-features',
-    title: 'TypeScript Features',
-    description:
-      'Voluptate minim velit laboris ipsum ullamco velit nisi. Proident sunt do officia veniam qui enim dolor.',
+    title: 'TypeScript Uncommon Features',
+    description: 'My list of TypeScript features that are not so common but have very interesting usecases.',
     category: frontendCategory,
     tags: ['TypeScript']
   }
