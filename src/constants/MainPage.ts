@@ -20,7 +20,7 @@ export const mainPageDescription = `Motivated developer with a strong coding bac
 export const skills: Array<Skill> = [
   {
     skill: 'FrontEnd',
-    subskills: ['TypeScript', 'HTML/CSS', 'React', 'NextJS', 'Astro'],
+    subskills: ['TypeScript', 'HTML/CSS', 'React/Astro/Vue', 'NextJS/Vite'],
     elementSkillId: 'frontend-circle',
     elementSubskillId: 'subfrontend-circle',
     color: '#06fcd8'
