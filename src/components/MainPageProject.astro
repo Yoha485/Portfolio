@@ -21,8 +21,8 @@ const { href, img, description, website, code } = Astro.props;
   <Marginer margin="18px" />
 
   <div class="project-links">
-    <Button><a href={website}><p>Website</p></a></Button>
-    <Button><a href={code}><p>Code</p></a></Button>
+    <Button><a href={website} target='_blank'><p>Website</p></a></Button>
+    <Button><a href={code} target="_blank"><p>Code</p></a></Button>
   </div>
 </div>
 
