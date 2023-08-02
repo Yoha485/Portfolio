@@ -3,12 +3,13 @@ import MainPageSociall from './MainPageSociall.astro';
 import Marginer from './Marginer.astro';
 import CV from './CV.astro';
 
-import { mainPageTitle, mainPageDescription } from '../constants/MainPage';
+import { mainPageTitle, mainPageDescription, mainPageTitleForMobile } from '../constants/MainPage';
 ---
 
 <section id="intro">
   <Marginer margin="20px" />
-  <h1>{mainPageTitle}</h1>
+  <h1 class="desktop-only">{mainPageTitle}</h1>
+  <h1 class="mobile-only">{mainPageTitleForMobile}</h1>
   <div class="description-and-cv">
     <div>
       <h2>{mainPageDescription}</h2>
@@ -72,6 +73,18 @@ import { mainPageTitle, mainPageDescription } from '../constants/MainPage';
 
     .cv {
       margin-right: 15%;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    h1 {
+      font-size: 56px;
+      margin-top: 40px;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin-top: 25px;
     }
   }
 </style>

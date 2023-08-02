@@ -35,3 +35,21 @@ input[type='reset'] {
   cursor: pointer;
   outline: inherit;
 }
+
+.mobile-only {
+  display: none;
+}
+
+.desktop-only {
+  display: block;
+}
+
+@media (max-width: 1000px) {
+  .mobile-only {
+    display: block;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+}

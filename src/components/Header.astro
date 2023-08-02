@@ -25,9 +25,11 @@ const items = [
   <nav>
     {
       items.map((item) => (
-        <Button>
-          <a href={item.href}>{item.name}</a>
-        </Button>
+        <div>
+          <Button>
+            <a href={item.href}>{item.name}</a>
+          </Button>
+        </div>
       ))
     }
   </nav>
@@ -50,6 +52,24 @@ const items = [
   @media (min-width: 1600px) {
     nav {
       font-size: 22px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    nav {
+      height: auto;
+
+      margin-top: 45px;
+
+      justify-content: space-between;
+      column-gap: 0px;
+
+      font-size: 22px;
+      line-height: normal;
+    }
+
+    nav > div:nth-child(1) {
+      display: none;
     }
   }
 </style>

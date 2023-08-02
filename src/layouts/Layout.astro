@@ -4,7 +4,6 @@ import Footer from '../components/Footer.astro';
 import MaxWidth from '../components/MaxWidth.astro';
 import HorizontalPadding from '../components/HorizontalPadding.astro';
 import SplitbeeAnalytics from '../components/SplitbeeAnalytics.astro';
-import MobileWebsiteRedirect from '../components/MobileWebsiteRedirect.astro';
 
 import '../styles/reset.css';
 import '../styles/global.css';
@@ -33,7 +32,6 @@ const { title = 'Portfolio' } = Astro.props as Props;
 
     <title>{title}</title>
 
-    <MobileWebsiteRedirect />
     <SplitbeeAnalytics />
   </head>
   <body>
