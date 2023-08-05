@@ -3,6 +3,7 @@ import MainPageTitle from '../components/MainPageIntro.astro';
 import Marginer from '../components/Marginer.astro';
 import MainPageProjects from '../components/MainPageProjects.astro';
 import MainPageSkills from '../components/MainPageSkills.astro';
+import MainPageSkillsMobile from '../components/MainPageSkillsMobile.astro';
 import MainPageSendMessage from '../components/MainPageSendMessage.astro';
 import MainPageLatestPosts from '../components/MainPageLatestPosts.astro';
 
@@ -12,13 +13,14 @@ import Layout from '../layouts/Layout.astro';
 <Layout>
   <Marginer margin="50px" />
   <MainPageTitle />
-  <Marginer margin="200px" />
+  <Marginer margin="200px" mobileMargin="100px" />
   <MainPageSkills />
-  <Marginer margin="260px" />
+  <MainPageSkillsMobile />
+  <Marginer margin="260px" mobileMargin="100px" />
   <MainPageProjects />
-  <Marginer margin="160px" />
+  <Marginer margin="160px" mobileMargin="80px" />
   <MainPageLatestPosts />
-  <Marginer margin="160px" />
+  <Marginer margin="160px" mobileMargin="80px" />
   <MainPageSendMessage />
-  <Marginer margin="160px" />
+  <Marginer margin="160px" mobileMargin="80px" />
 </Layout>

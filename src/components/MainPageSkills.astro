@@ -4,7 +4,7 @@ import MainPageSkill from './MainPageSkill.astro';
 import { skills } from '../constants/MainPage';
 ---
 
-<section id="skills">
+<section id="skills" class="desktop-only">
   {
     skills.map((skill) => (
       <MainPageSkill
@@ -22,7 +22,7 @@ import { skills } from '../constants/MainPage';
     import { skills } from '../constants/MainPage';
 
     const getScrollTimelineWithiShift = (shift: number) => {
-      //@ts-ignorex
+      //@ts-ignore
       return new ScrollTimeline({
         source: document.scrollingElement,
         orientation: 'block',

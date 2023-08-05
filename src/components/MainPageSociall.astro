@@ -13,6 +13,10 @@ const items = [
   {
     name: 'Telegram',
     href: 'https://t.me/wme_music'
+  },
+  {
+    name: 'Download CV',
+    href: 'https://drive.google.com/uc?export=download&id=1e03ff3yo1baZpQe78w86bghu8JpeK5Sm'
   }
 ];
 ---
@@ -21,7 +25,9 @@ const items = [
   {
     items.map((item) => (
       <Button>
-        <a href={item.href}>{item.name}</a>
+        <a href={item.href} target="_blank" rel="noreferrer">
+          {item.name}
+        </a>
       </Button>
     ))
   }
@@ -38,9 +44,40 @@ const items = [
     line-height: 27px;
   }
 
+  address :global(button):last-child {
+    display: none;
+  }
+
   @media (min-width: 1600px) {
     address {
       font-size: 22px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    address {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 15px;
+    }
+
+    address :global(button) {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    address :global(button):last-child {
+      display: flex;
+    }
+
+    address > :global(button):last-child > a:after {
+      display: block;
+      content: '';
+
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90.02deg, #06fdd8 1.06%, #0e9aff 102.58%);
+      transition: transform 200ms ease-out;
     }
   }
 </style>

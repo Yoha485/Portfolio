@@ -1,14 +1,22 @@
 ---
 export interface Props {
   margin: string;
+  mobileMargin?: string;
 }
 
 const { margin } = Astro.props;
+const mobileMargin = Astro.props.mobileMargin || margin;
 ---
 
 <div></div>
-<style define:vars={{ margin }}>
+<style define:vars={{ margin, mobileMargin }}>
   div {
     margin-top: var(--margin);
+  }
+
+  @media (max-width: 1000px) {
+    div {
+      margin-top: var(--mobileMargin);
+    }
   }
 </style>

@@ -13,11 +13,11 @@ import { mainPageTitle, mainPageDescription, mainPageTitleForMobile } from '../c
   <div class="description-and-cv">
     <div>
       <h2>{mainPageDescription}</h2>
-      <Marginer margin="70px" />
+      <Marginer margin="70px" mobileMargin='45px' />
       <MainPageSociall />
     </div>
 
-    <div class="cv">
+    <div class="cv desktop-only">
       <CV />
     </div>
   </div>
@@ -85,6 +85,10 @@ import { mainPageTitle, mainPageDescription, mainPageTitleForMobile } from '../c
     h2 {
       font-size: 18px;
       margin-top: 25px;
+    }
+
+    .description-and-cv {
+      display: block;
     }
   }
 </style>

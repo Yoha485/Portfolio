@@ -25,11 +25,11 @@ const items = [
   <nav>
     {
       items.map((item) => (
-        <div>
-          <Button>
-            <a href={item.href}>{item.name}</a>
-          </Button>
-        </div>
+        <Button>
+          <a href={item.href}>
+            {item.name}
+          </a>
+        </Button>
       ))
     }
   </nav>
@@ -68,7 +68,7 @@ const items = [
       line-height: normal;
     }
 
-    nav > div:nth-child(1) {
+    nav > :global(button):nth-child(1) {
       display: none;
     }
   }

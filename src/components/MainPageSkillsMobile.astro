@@ -1,0 +1,46 @@
+---
+import MainPageSkillMobile from './MainPageSkillMobile.astro';
+
+import { skills } from '../constants/MainPage';
+---
+
+<section id="skills" class="mobile-only">
+  {
+    skills.map((skill) => (
+      <MainPageSkillMobile
+        skill={skill.skill}
+        subskills={skill.subskills}
+        elementSkillId={skill.elementSkillId}
+        elementSubskillId={skill.elementSubskillId}
+        color={skill.color}
+      />
+    ))
+  }
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((element) => observer.observe(element));
+  </script>
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  @media (min-width: 640px) {
+    section {
+      padding: 0 20%;
+    }
+  }
+</style>

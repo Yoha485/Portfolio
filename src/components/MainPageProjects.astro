@@ -28,6 +28,12 @@ import MainPageSectionTitle from './MainPageSectionTitle.astro';
     display: grid;
     column-gap: 25px;
     row-gap: 80px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  @media (max-width: 1000px) {
+    div {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
