@@ -1,0 +1,36 @@
+---
+import MainPageCompany from './MainPageCompany.astro';
+
+import { companies } from '../constants/MainPage';
+import MainPageSectionTitle from './MainPageSectionTitle.astro';
+---
+
+<section id="companies">
+  <MainPageSectionTitle>Companies I've been worked with</MainPageSectionTitle>
+
+  <div>
+    {
+      companies.map((company) => (
+        <MainPageCompany
+          name={company.name}
+          img={company.img}
+        />
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  div {
+    display: grid;
+    column-gap: 25px;
+    row-gap: 80px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  @media (max-width: 1000px) {
+    div {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

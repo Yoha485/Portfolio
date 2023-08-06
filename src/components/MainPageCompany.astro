@@ -1,0 +1,49 @@
+---
+import Button from './Button.astro';
+import Marginer from './Marginer.astro';
+
+import type { Company } from '../constants/MainPage';
+
+type Props = Company;
+
+const { name, img } = Astro.props;
+---
+
+<div class="project">
+  <div class="preview">
+    <img src={img} alt="No Image Found" />
+  </div>
+  <Marginer margin="28px" />
+
+  <p class="name">{name}</p>
+</div>
+
+<style>
+  .preview {
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+    border: 1px solid #404040;
+
+    -webkit-transition: all 500ms ease-out;
+    -moz-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
+
+    padding: 15%;
+  }
+
+  .preview:hover {
+    border: 1px solid var(--white);
+    padding: 13%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .name {
+    text-align: center;
+    padding: 0 12%;
+  }
+</style>

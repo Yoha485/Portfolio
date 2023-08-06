@@ -6,6 +6,11 @@ export interface Project {
   code: string;
 }
 
+export interface Company {
+  name: string;
+  img: string;
+}
+
 export interface Skill {
   skill: string;
   subskills: Array<string>;
@@ -59,3 +64,18 @@ export const projects: Array<Project> = [
     code: 'https://github.com/Yoha485/untwtr'
   }
 ];
+
+export const companies: Array<Company> = [
+  {
+    name: 'Multi Parts',
+    img: '/MainPage/companies/multiparts.jpg',
+  },
+  {
+    name: 'Pickaxe',
+    img: '/MainPage/companies/pickaxe.jpg',
+  },
+  {
+    name: 'Thumbtack',
+    img: '/MainPage/companies/thumbtack.jpg',
+  }
+]
