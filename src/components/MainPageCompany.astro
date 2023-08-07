@@ -1,17 +1,18 @@
 ---
-import Button from './Button.astro';
 import Marginer from './Marginer.astro';
 
 import type { Company } from '../constants/MainPage';
 
 type Props = Company;
 
-const { name, img } = Astro.props;
+const { name, img, link } = Astro.props;
 ---
 
 <div class="project">
   <div class="preview">
-    <img src={img} alt="No Image Found" />
+    <a href={link} target="_blank" rel="noreferrer">
+      <img src={img} alt="No Image Found" />
+    </a>
   </div>
   <Marginer margin="28px" />
 

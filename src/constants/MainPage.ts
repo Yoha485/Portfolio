@@ -9,6 +9,7 @@ export interface Project {
 export interface Company {
   name: string;
   img: string;
+  link: string;
 }
 
 export interface Skill {
@@ -26,21 +27,21 @@ export const mainPageDescription = `Motivated developer with a strong coding bac
 export const skills: Array<Skill> = [
   {
     skill: 'FrontEnd',
-    subskills: ['TypeScript', 'HTML / CSS', 'React / Astro / Vue', 'NextJS / Vite'],
+    subskills: ['TypeScript', 'React', 'Webpack', 'HTML / CSS'],
     elementSkillId: 'frontend-circle',
     elementSubskillId: 'subfrontend-circle',
     color: '#06fcd8'
   },
   {
     skill: 'BackEnd',
-    subskills: ['Postgres', 'MongoDB', 'NestJS', 'Spring Boot', 'Flask'],
+    subskills: ['.NET / Java', 'SQL', 'Express.js / Spring', 'Data Structures', 'Algorithms'],
     elementSkillId: 'backend-circle',
     elementSubskillId: 'subbackend-circle',
     color: '#0AD0EA'
   },
   {
     skill: 'DevOps',
-    subskills: ['Docker', 'CI/CD', 'Azure', 'AWS', 'Vercel'],
+    subskills: ['AWS / Azure', 'CI/CD', 'Docker', 'Vercel'],
     elementSkillId: 'devops-circle',
     elementSubskillId: 'subdevops-circle',
     color: '#0DA1FC'
@@ -69,13 +70,16 @@ export const companies: Array<Company> = [
   {
     name: 'Multi Parts',
     img: '/MainPage/companies/multiparts.jpg',
+    link: 'https://www.linkedin.com/company/multi-parts/'
   },
   {
     name: 'Pickaxe',
     img: '/MainPage/companies/pickaxe.jpg',
+    link: 'https://www.linkedin.com/company/pickaxeproject/'
   },
   {
     name: 'Thumbtack',
     img: '/MainPage/companies/thumbtack.jpg',
+    link: 'https://www.linkedin.com/company/thumbtack-inc./'
   }
-]
+];

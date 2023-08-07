@@ -6,7 +6,7 @@ import MainPageSectionTitle from './MainPageSectionTitle.astro';
 ---
 
 <section id="companies">
-  <MainPageSectionTitle>Companies I've been worked with</MainPageSectionTitle>
+  <MainPageSectionTitle>Companies I've been working with</MainPageSectionTitle>
 
   <div>
     {
@@ -14,6 +14,7 @@ import MainPageSectionTitle from './MainPageSectionTitle.astro';
         <MainPageCompany
           name={company.name}
           img={company.img}
+          link={company.link}
         />
       ))
     }
